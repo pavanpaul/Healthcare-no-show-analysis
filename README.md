@@ -68,7 +68,6 @@ I used the **Random Forest Classifier** to predict whether a patient would show 
 ## Power BI Dashboard Highlights
 
 * **KPIs**: Total Appointments, No-Show Rate, SMS Effectiveness
-* **Slicers**: Gender, Weekend vs Weekday, SMS Received
 * **Visuals**:
 
   * Bar Charts showing medical condition vs show-up
