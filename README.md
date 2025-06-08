@@ -1,87 +1,55 @@
 # Healthcare Appointment No-Show Analysis
 
-Missed medical appointments are a challenge that many healthcare systems face. These missed visits can disrupt clinic operations, lead to underutilized resources, and potentially affect patient outcomes due to delayed treatment. This project takes a deep dive into analyzing and understanding the patterns and behaviors that contribute to no-shows.
+## Project Overview
 
-## Project Purpose
+This project analyzes patient appointment data to predict no-shows and uncover factors influencing appointment attendance. By leveraging data preprocessing, exploratory data analysis (EDA), and predictive modeling, the goal is to help healthcare providers reduce missed visits and improve operational efficiency.
 
-The aim of this project is to explore, analyze, and predict why patients miss their scheduled medical appointments. The insights gained here can help healthcare providers take proactive steps to reduce no-show rates and improve the efficiency of appointment scheduling systems.
+## Dataset
 
----
+The dataset was sourced from [Kaggle](https://www.kaggle.com/datasets/joniarroba/noshowappointments) and contains anonymized patient appointment records, including demographic details, medical history, appointment dates, and attendance status.
 
-## Tools Used
+## Tools & Technologies
 
-* Python (for data preprocessing and feature engineering)
-* SQL (for exploratory data analysis)
-* Power BI (for interactive reporting and dashboards)
-* Machine Learning (Random Forest, SMOTE for class imbalance handling)
-* GitHub (for version control and sharing the project)
+- Python (Pandas, NumPy, Scikit-learn)  
+- SQL (for data exploration and analysis)  
+- SMOTE (to handle class imbalance)  
+- Power BI (for interactive data visualization)  
+- Google Colab (for cloud-based coding and analysis)
 
----
+## Project Workflow
 
-## Project Files
+1. **Data Collection & Import**  
+   - Downloaded dataset from Kaggle and imported it into Google Colab for processing.
 
-* **HealthCare\_Appointment\_Project.ipynb** – Initial data cleaning, transformation, and feature creation.
-* **EDA(HealthCare) in SQL.ipynb** – Exploratory data analysis performed using SQL queries.
-* **PREDICTIVE MODELLING(HealthCare).ipynb** – Training and evaluation of the Random Forest classifier.
-* **Healthcare Visualization.pbix** – A visually interactive dashboard created in Power BI.
+2. **Data Preprocessing**  
+   - Cleaned missing values and engineered features such as waiting days (time between scheduling and appointment) and SMS reminder flags.
 
----
+3. **Exploratory Data Analysis (EDA)**  
+   - Used SQL queries to identify trends and patterns in no-shows based on demographics, medical conditions, and neighborhoods.
 
-## Main Objectives
+4. **Predictive Modeling**  
+   - Built classification models using Logistic Regression and Random Forest algorithms.  
+   - Applied SMOTE to address class imbalance and improve model accuracy.
 
-1. Understand what influences patient no-shows**: We investigated age, gender, SMS reminders, and waiting times.
-2. Analyze the effectiveness of SMS communication**: We tested if receiving an SMS impacts the show-up rate.
-3. Study scheduling behavior**: We looked at patterns around days of the week and how long patients wait.
-4. Predict no-show behavior**: We built a machine learning model that predicts the likelihood of a no-show.
-5. Recommend improvements**: Based on our insights, we suggest practical steps to reduce no-shows.
+5. **Data Visualization**  
+   - Developed an interactive Power BI dashboard to highlight key insights and support strategic decision-making.
 
----
+## Key Findings
 
-## Key Insights
+- Younger patients and certain neighborhoods showed higher no-show rates.  
+- SMS reminders and shorter waiting times positively impacted attendance.  
+- The Random Forest model with SMOTE yielded improved prediction performance compared to baseline models.
 
-* **SMS Reminders Work**: Patients who received SMS reminders were more likely to attend.
-* **Younger Patients Miss More**: The no-show rate was highest among patients under 30.
-* **Long Wait = High No-Show**: As the waiting days between scheduling and the actual appointment increased, so did the chance of a no-show.
-* **Weekdays Matter**: Most no-shows occurred on Mondays and Tuesdays.
+## How to Run
 
----
-
-## Machine Learning Model
-
-I used the **Random Forest Classifier** to predict whether a patient would show up. Since our data had more "show-ups" than "no-shows," we used **SMOTE** to balance it. The model reached an accuracy of around **78%**.
-
-### Why Random Forest?
-
-* It’s easy to interpret.
-* It handles imbalanced data well.
-* It provides feature importance to understand what matters most.
-
-### Key Features:
-
-* SMS Received
-* Waiting Days
-* Age
-* IsWeekend (derived feature)
-
----
-
-## Power BI Dashboard Highlights
-
-* **KPIs**: Total Appointments, No-Show Rate, SMS Effectiveness
-* **Visuals**:
-
-  * Bar Charts showing medical condition vs show-up
-  * Line Graph for Waiting Days trend
-  * Pie Charts for Age and Gender breakdown
-  * Column Chart comparing show vs no-show across weekdays
-
----
+- Open the Jupyter notebooks in the `/notebooks` directory using Google Colab or Jupyter locally.  
+- Follow the step-by-step analysis from data preprocessing to modeling and visualization.  
+- Power BI dashboard files are located in `/visualizations`. (Instructions for accessing or viewing the dashboard can be added here.)
 
 ## Final Thoughts
 
-This project was not just about analyzing data – it was about turning that data into meaningful stories. By combining programming, querying, visualization, and modeling, we’ve built a complete narrative that can guide decisions in the healthcare space.
+This project demonstrates the power of combining data analysis and predictive modeling to address real-world healthcare challenges. By identifying patterns in patient no-shows, healthcare providers can take proactive measures such as targeted reminders and optimized scheduling to improve appointment adherence. The insights and tools developed here have the potential to enhance patient care while increasing operational efficiency.
 
----
 
 ## Author 
 
